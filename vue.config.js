@@ -5,5 +5,6 @@ module.exports = {
         data: `@import "@/styles/_index.scss";`
       }
     }
-  }
+  },
+  publicPath: 'vue-final-countdown'
 };
