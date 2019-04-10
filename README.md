@@ -5,6 +5,7 @@
 Create countdowns for your upcoming events with beautiful premade images, or use your own.
 
 Demo:
+
 https://jguix.github.com/vue-final-countdown/
 
 ## The internals
