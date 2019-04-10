@@ -28,3 +28,4 @@ Some useful links:
 - [Vue Router](https://router.vuejs.org/)
 - [Vuex state management for Vue](https://vuex.vuejs.org/)
 - [Vue Style Guide](https://vuejs.org/v2/style-guide/)
+- [Deploy vue-cli project to github pages](https://medium.com/@Roli_Dori/deploy-vue-cli-3-project-to-github-pages-ebeda0705fbd)
