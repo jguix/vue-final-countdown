@@ -1,39 +1,29 @@
-# final-countdown
+# The Final Countdown
 
-## Project setup
-```
-yarn install
-```
+## The app
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Create countdowns for your upcoming events with beautiful premade images, or use your own.
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+Demo:
+https://jguix.github.com/vue-final-countdown/
 
-### Run your tests
-```
-yarn run test
-```
+## The internals
 
-### Lints and fixes files
-```
-yarn run lint
-```
+This project is a Vue PoC, built to demonstrate the following features:
 
-### Run your end-to-end tests
-```
-yarn run test:e2e
-```
+- Typescript and class based Vue components
+- Vue Router
+- Vuex state management
+- SASS preprocessor
+- Unit testing with Jest
+- E2E testing with Cypress
 
-### Run your unit tests
-```
-yarn run test:unit
-```
+The project was created with Vue CLI, which can provide the features above out the box if configured properly. The Vue Style Guide has been followed regarding naming and code style. As for the project structure, it remains simple and no attempt has been made to structure the project for scaling up.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Some useful links:
+
+- [Vue CLI](https://cli.vuejs.org/)
+- [Vue TypeScript Support](https://vuejs.org/v2/guide/typescript.html)
+- [Vue Router](https://router.vuejs.org/)
+- [Vuex state management for Vue](https://vuex.vuejs.org/)
+- [Vue Style Guide](https://vuejs.org/v2/style-guide/)
