@@ -18,6 +18,7 @@ This project is a Vue PoC, built to demonstrate the following features:
 - SASS preprocessor
 - Unit testing with Jest
 - E2E testing with Cypress
+- Electron build
 
 The project was created with Vue CLI, which can provide the features above out the box if configured properly. The Vue Style Guide has been followed regarding naming and code style. As for the project structure, it remains simple and no attempt has been made to structure the project for scaling up.
 
@@ -29,3 +30,4 @@ Some useful links:
 - [Vuex state management for Vue](https://vuex.vuejs.org/)
 - [Vue Style Guide](https://vuejs.org/v2/style-guide/)
 - [Deploy vue-cli project to github pages](https://medium.com/@Roli_Dori/deploy-vue-cli-3-project-to-github-pages-ebeda0705fbd)
+- [Vue CLI Electron plugin builder](https://nklayman.github.io/vue-cli-plugin-electron-builder)
