@@ -8,24 +8,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import TfcTheHeader from "@/components/TheHeader.vue"; // @ is an alias to /src
-import moment from "moment";
-import { Counter } from "./models/counter.model";
+import { Component, Vue } from 'vue-property-decorator';
+import TfcTheHeader from '@/components/TheHeader.vue'; // @ is an alias to /src
+import moment from 'moment';
+import { Counter } from './models/counter.model';
 
 @Component({
   components: {
-    TfcTheHeader
-  }
+    TfcTheHeader,
+  },
 })
 export default class App extends Vue {
-  mounted() {
+  public mounted() {
     this.registerInterval();
   }
 
-  registerInterval() {
+  public registerInterval() {
     setInterval(() => {
-      this.$store.dispatch("updateCurrentMoment");
+      this.$store.dispatch('updateCurrentMoment');
     }, 1000);
   }
 }

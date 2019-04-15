@@ -9,23 +9,23 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import TfcCounter from "@/components/Counter.vue";
-import TfcBaseButton from "@/components/BaseButton.vue";
+import { Component, Vue } from 'vue-property-decorator';
+import TfcCounter from '@/components/Counter.vue';
+import TfcBaseButton from '@/components/BaseButton.vue';
 
 @Component({
   components: {
     TfcCounter,
-    TfcBaseButton
-  }
+    TfcBaseButton,
+  },
 })
 export default class TfcDetails extends Vue {
-  editCounter() {
+  public editCounter() {
     this.$router.replace(`/edit/${this.counter.id}`);
   }
 
-  deleteCounter() {
-    this.$store.dispatch("deleteCounter", this.counter.id);
+  public deleteCounter() {
+    this.$store.dispatch('deleteCounter', this.counter.id);
   }
 
   get counter() {

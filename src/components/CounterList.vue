@@ -7,16 +7,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import TfcCounter from "@/components/Counter.vue"; // @ is an alias to /src
+import { Component, Vue } from 'vue-property-decorator';
+import TfcCounter from '@/components/Counter.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-    TfcCounter
-  }
+    TfcCounter,
+  },
 })
 export default class TfcCounterList extends Vue {
-  goToDetails(id: number) {
+  public goToDetails(id: number) {
     this.$router.push({ path: `details/${id}` });
   }
 

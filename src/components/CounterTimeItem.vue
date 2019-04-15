@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import moment, { Moment } from "moment";
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import moment, { Moment } from 'moment';
 
 @Component
 export default class TfcCounterTimeItem extends Vue {

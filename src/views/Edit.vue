@@ -31,48 +31,48 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import moment, { Moment } from "moment";
-import TfcBaseButton from "../components/BaseButton.vue";
+import { Component, Vue } from 'vue-property-decorator';
+import moment, { Moment } from 'moment';
+import TfcBaseButton from '../components/BaseButton.vue';
 
 @Component({
   components: {
-    TfcBaseButton
-  }
+    TfcBaseButton,
+  },
 })
 export default class TfcEdit extends Vue {
-  id: number = moment()
+  public id: number = moment()
     .toDate()
     .getTime();
-  title: string = "";
-  datetime: string = "";
-  imgName: string = "";
-  imgUrl: string = "";
+  public title: string = '';
+  public datetime: string = '';
+  public imgName: string = '';
+  public imgUrl: string = '';
 
-  mounted() {
+  public mounted() {
     if (this.isEditing) {
       this.id = Number(this.$route.params.id);
       const counter = this.$store.getters.getCounter(this.id);
       this.title = counter.title;
-      this.datetime = counter.moment.format("YYYY-MM-DDTHH:mm:ss");
+      this.datetime = counter.moment.format('YYYY-MM-DDTHH:mm:ss');
       this.imgName = counter.imgName;
       this.imgUrl = counter.imgUrl;
     }
   }
 
-  onSubmit() {
+  public onSubmit() {
     if (this.isValid) {
       const counter = {
         id: this.id,
         title: this.title,
-        moment: moment(`${this.datetime}`, "YYYY-MM-DDTHH:mm"),
+        moment: moment(`${this.datetime}`, 'YYYY-MM-DDTHH:mm'),
         imgName: this.imgName,
-        imgUrl: this.imgUrl
+        imgUrl: this.imgUrl,
       };
       if (this.isEditing) {
-        this.$store.dispatch("editCounter", counter);
+        this.$store.dispatch('editCounter', counter);
       } else {
-        this.$store.dispatch("addCounter", counter);
+        this.$store.dispatch('addCounter', counter);
       }
     }
   }
@@ -82,7 +82,7 @@ export default class TfcEdit extends Vue {
   }
 
   get isEditing(): boolean {
-    return this.$route.path.includes("edit");
+    return this.$route.path.includes('edit');
   }
 
   get imgNames(): String[] {

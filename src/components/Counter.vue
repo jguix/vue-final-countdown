@@ -21,19 +21,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import moment, { Moment } from "moment";
-import TfcCounterTimeItem from "@/components/CounterTimeItem.vue";
-import TfcBaseConfetti from "@/components/BaseConfetti.vue";
-import TfcBaseRibbon from "@/components/BaseRibbon.vue";
-import { Counter } from "@/models/counter.model";
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import moment, { Moment } from 'moment';
+import TfcCounterTimeItem from '@/components/CounterTimeItem.vue';
+import TfcBaseConfetti from '@/components/BaseConfetti.vue';
+import TfcBaseRibbon from '@/components/BaseRibbon.vue';
+import { Counter } from '@/models/counter.model';
 
 @Component({
   components: {
     TfcCounterTimeItem,
     TfcBaseConfetti,
-    TfcBaseRibbon
-  }
+    TfcBaseRibbon,
+  },
 })
 export default class TfcCounter extends Vue {
   @Prop() private counter!: Counter;
@@ -41,7 +41,7 @@ export default class TfcCounter extends Vue {
   get days() {
     const days = this.counter.moment.diff(
       this.$store.getters.getCurrentMoment(),
-      "days"
+      'days',
     );
     return days >= 0 ? days : 0;
   }
@@ -50,7 +50,7 @@ export default class TfcCounter extends Vue {
     const hours =
       this.counter.moment.diff(
         this.$store.getters.getCurrentMoment(),
-        "hours"
+        'hours',
       ) % 24;
     return hours >= 0 ? hours : 0;
   }
@@ -59,7 +59,7 @@ export default class TfcCounter extends Vue {
     const minutes =
       this.counter.moment.diff(
         this.$store.getters.getCurrentMoment(),
-        "minutes"
+        'minutes',
       ) % 60;
     return minutes >= 0 ? minutes : 0;
   }
@@ -68,7 +68,7 @@ export default class TfcCounter extends Vue {
     const seconds =
       this.counter.moment.diff(
         this.$store.getters.getCurrentMoment(),
-        "seconds"
+        'seconds',
       ) % 60;
     return seconds >= 0 ? seconds : 0;
   }
@@ -81,12 +81,12 @@ export default class TfcCounter extends Vue {
 
   get hasExpired() {
     return this.counter.moment.isSameOrBefore(
-      this.$store.getters.getCurrentMoment()
+      this.$store.getters.getCurrentMoment(),
     );
   }
 
   get isDetailsPage() {
-    return this.$route.path.includes("details");
+    return this.$route.path.includes('details');
   }
 }
 </script>

@@ -9,14 +9,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class TfcTheHeader extends Vue {
-  title: string = "";
+  public title: string = '';
 
-  mounted() {
-    this.title = this.$router.currentRoute.name || "";
+  public mounted() {
+    this.title = this.$router.currentRoute.name || '';
 
     this.$router.afterEach((to: any, from: any) => {
       this.title = to.name;

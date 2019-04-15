@@ -3,12 +3,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "vue-property-decorator";
+import { Component, Vue, Prop } from 'vue-property-decorator';
 
 @Component
 export default class TfcBaseButton extends Vue {
   @Prop() private text!: string;
-  @Prop() private type!: "positive" | "negative" | "disabled";
+  @Prop() private type!: 'positive' | 'negative' | 'disabled';
 }
 </script>
 
